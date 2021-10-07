@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from Asesoria_B_SpA.apps.emails.views import send_email
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('contacto/', send_email, name="send_email"),
 ]
