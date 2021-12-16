@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -120,10 +120,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'Templates/static'),)
 
-EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST="smtp.gmail.com"
-EMAIL_USE_TLS=True
-EMAIL_PORT=587
-EMAIL_HOST_USER="leomessi4923@gmail.com"
-EMAIL_HOST_PASSWORD="messi4125"
+EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
+SENDGRID_API_KEY = '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'
+SENDGRID_SANDBOX_MODE_IN_DEBUG=False
