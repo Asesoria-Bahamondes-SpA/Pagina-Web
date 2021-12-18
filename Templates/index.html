@@ -385,9 +385,9 @@
     }
     
     .play-btn {
-        width: 100px;
-        height: 100px;
-        background: radial-gradient( rgba(255, 0, 35, 0.8) 60%, rgba(255, 255, 255, 1) 62%);
+        width: 55px;
+        height: 55px;
+        background: radial-gradient( rgba(255, 52, 52, 0.8) 60%, rgba(255, 255, 255, 1) 62%);
         border-radius: 50%;
         position: relative;
         display: block;
@@ -501,16 +501,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="top-bar-right">
-                        <div class="social">
-                            <a href=""><i class="fab fa-twitter"></i></a>
-                            <a href=""><i class="fab fa-facebook-f"></i></a>
-                            <a href=""><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://www.instagram.com/asesorias_contablesspa/?hl=es-la"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -543,7 +533,7 @@
                                 <a class="nav-link js-scroll" href="#work">Reseñas</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link js-scroll" href="#contact">Contacto</a>
+                                <a class="nav-link js-scroll" href="#contacto">Contacto</a>
                             </li>
                         </ul>
                     </div>
@@ -566,7 +556,6 @@
                     <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
                 </div>
                 <br>
-                <h4 style="color: white">¿Que es asesorias contable bhamondes SpA? </h4>
 
                 <br>
                 <div class="container">
@@ -771,11 +760,870 @@
         .container {
             overflow-x: hidden;
         }
-    </style>
+
+        .fnc {
+  /* you can add color names and their values here
+  and then simply add classes like .m--blend-$colorName to .fnc-slide 
+  to apply specific color for mask blend mode */
+}
+.fnc-slider {
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
+  height: 100vh;
+}
+.fnc-slider *, .fnc-slider *:before, .fnc-slider *:after {
+  box-sizing: border-box;
+}
+.fnc-slider__slides {
+  position: relative;
+  height: 100%;
+  transition: transform 1s 0.6666666667s;
+}
+.fnc-slider .m--blend-dark .fnc-slide__inner {
+  background-color: #8a8a8a;
+}
+.fnc-slider .m--blend-dark .fnc-slide__mask-inner {
+  background-color: #575757;
+}
+.fnc-slider .m--navbg-dark {
+  background-color: #575757;
+}
+.fnc-slider .m--blend-green .fnc-slide__inner {
+  background-color: #6d9b98;
+}
+.fnc-slider .m--blend-green .fnc-slide__mask-inner {
+  background-color: #42605E;
+}
+.fnc-slider .m--navbg-green {
+  background-color: #42605E;
+}
+.fnc-slider .m--blend-red .fnc-slide__inner {
+  background-color: #ea2329;
+}
+.fnc-slider .m--blend-red .fnc-slide__mask-inner {
+  background-color: #990e13;
+}
+.fnc-slider .m--navbg-red {
+  background-color: #990e13;
+}
+.fnc-slider .m--blend-blue .fnc-slide__inner {
+  background-color: #59aecb;
+}
+.fnc-slider .m--blend-blue .fnc-slide__mask-inner {
+  background-color: #2D7791;
+}
+.fnc-slider .m--navbg-blue {
+  background-color: #2D7791;
+}
+.fnc-slide {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+}
+.fnc-slide.m--before-sliding {
+  z-index: 2 !important;
+  transform: translate3d(100%, 0, 0);
+}
+.fnc-slide.m--active-slide {
+  z-index: 1;
+  transition: transform 1s 0.6666666667s ease-in-out;
+  transform: translate3d(0, 0, 0);
+}
+.fnc-slide__inner {
+  position: relative;
+  height: 100%;
+  background-size: cover;
+  background-position: center top;
+  transform: translate3d(0, 0, 0);
+}
+.m--global-blending-active .fnc-slide__inner, .m--blend-bg-active .fnc-slide__inner {
+  background-blend-mode: luminosity;
+}
+.m--before-sliding .fnc-slide__inner {
+  transform: translate3d(-100%, 0, 0);
+}
+.m--active-slide .fnc-slide__inner {
+  transition: transform 1s 0.6666666667s ease-in-out;
+  transform: translate3d(0, 0, 0);
+}
+.fnc-slide__mask {
+  overflow: hidden;
+  z-index: 1;
+  position: absolute;
+  right: 60%;
+  top: 15%;
+  width: 50.25vh;
+  height: 67vh;
+  margin-right: -90px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 6vh 0, 6vh 61vh, 44vh 61vh, 44vh 6vh, 6vh 6vh);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 0, 6vh 0, 6vh 61vh, 44vh 61vh, 44vh 6vh, 6vh 6vh);
+  transform-origin: 50% 0;
+  transition-timing-function: ease-in-out;
+}
+.m--before-sliding .fnc-slide__mask {
+  transform: rotate(-10deg) translate3d(200px, 0, 0);
+  opacity: 0;
+}
+.m--active-slide .fnc-slide__mask {
+  transition: transform 0.7s 1.2222222222s, opacity 0.35s 1.2222222222s;
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
+.m--previous-slide .fnc-slide__mask {
+  transition: transform 0.7s 0.3333333333s, opacity 0.35s 0.6833333333s;
+  transform: rotate(10deg) translate3d(-200px, 0, 0);
+  opacity: 0;
+}
+.fnc-slide__mask-inner {
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100vw;
+  height: 100vh;
+  margin-left: -50vw;
+  margin-top: -50vh;
+  background-size: cover;
+  background-position: center center;
+  background-blend-mode: luminosity;
+  transform-origin: 50% 16.5vh;
+  transition-timing-function: ease-in-out;
+}
+.m--before-sliding .fnc-slide__mask-inner {
+  transform: translateY(0) rotate(10deg) translateX(-200px) translateZ(0);
+}
+.m--active-slide .fnc-slide__mask-inner {
+  transition: transform 0.7s 1.2222222222s;
+  transform: translateX(0);
+}
+.m--previous-slide .fnc-slide__mask-inner {
+  transition: transform 0.7s 0.3333333333s;
+  transform: translateY(0) rotate(-10deg) translateX(200px) translateZ(0);
+}
+.fnc-slide__content {
+  z-index: 2;
+  position: absolute;
+  left: 40%;
+  top: 40%;
+}
+.fnc-slide__heading {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.fnc-slide__heading-line {
+  overflow: hidden;
+  position: relative;
+  padding-right: 20px;
+  font-size: 34px;
+  color: #fff;
+  word-spacing: 5px;
+}
+.fnc-slide__heading-line:nth-child(2) {
+  padding-left: 30px;
+}
+.m--before-sliding .fnc-slide__heading-line {
+  transform: translateY(100%);
+}
+.m--active-slide .fnc-slide__heading-line {
+  transition: transform 1.5s 1s;
+  transform: translateY(0);
+}
+.m--previous-slide .fnc-slide__heading-line {
+  transition: transform 1.5s;
+  transform: translateY(-100%);
+}
+.fnc-slide__heading-line span {
+  display: block;
+}
+.m--before-sliding .fnc-slide__heading-line span {
+  transform: translateY(-100%);
+}
+.m--active-slide .fnc-slide__heading-line span {
+  transition: transform 1.5s 1s;
+  transform: translateY(0);
+}
+.m--previous-slide .fnc-slide__heading-line span {
+  transition: transform 1.5s;
+  transform: translateY(100%);
+}
+.fnc-slide__action-btn {
+  position: relative;
+  margin-left: 200px;
+  padding: 5px 15px;
+  font-size: 20px;
+  line-height: 1;
+  color: transparent;
+  border: none;
+  text-transform: uppercase;
+  background: transparent;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+}
+.fnc-slide__action-btn span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transition: transform 0.3s;
+  transform-origin: 50% 0;
+  line-height: 30px;
+  color: #fff;
+}
+.fnc-slide__action-btn span:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fff;
+  border-top: none;
+  border-bottom: none;
+}
+.fnc-slide__action-btn span:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  line-height: 30px;
+  background: #1F2833;
+  opacity: 0;
+  transform-origin: 50% 0;
+  transform: translateY(100%) rotateX(-90deg);
+  transition: opacity 0.15s 0.15s;
+}
+.fnc-slide__action-btn:hover span {
+  transform: rotateX(90deg);
+}
+.fnc-slide__action-btn:hover span:after {
+  opacity: 1;
+  transition: opacity 0.15s;
+}
+.fnc-nav {
+  z-index: 5;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.fnc-nav__bgs {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.fnc-nav__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.fnc-nav__bg.m--nav-bg-before {
+  z-index: 2 !important;
+  transform: translateX(100%);
+}
+.fnc-nav__bg.m--active-nav-bg {
+  z-index: 1;
+  transition: transform 1s 0.6666666667s;
+  transform: translateX(0);
+}
+.fnc-nav__controls {
+  font-size: 0;
+}
+.fnc-nav__control {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100px;
+  height: 50px;
+  font-size: 14px;
+  color: #fff;
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.fnc-nav__control.m--active-control {
+  background: #1F2833;
+}
+.fnc-nav__control-progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  transition-timing-function: linear !important;
+}
+.m--with-autosliding .m--active-control .fnc-nav__control-progress {
+  transform: scaleX(1);
+}
+.m--prev-control .fnc-nav__control-progress {
+  transform: translateX(100%);
+  transition: transform 0.5s !important;
+}
+.m--reset-progress .fnc-nav__control-progress {
+  transform: scaleX(0);
+  transition: transform 0s 0s !important;
+}
+.m--autosliding-blocked .fnc-nav__control-progress {
+  transition: all 0s 0s !important;
+  transform: scaleX(0) !important;
+}
+
+/* NOT PART OF COMMON SLIDER STYLES */
+
+.demo-cont {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  perspective: 1500px;
+  background: #000;
+}
+.demo-cont__credits {
+  box-sizing: border-box;
+  overflow-y: auto;
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 400px;
+  height: 100%;
+  padding: 20px 10px 30px;
+  background: #303030;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  color: #fff;
+  text-align: center;
+  transition: transform 0.7s;
+  transform: translate3d(100%, 0, 0) rotateY(-45deg);
+  will-change: transform;
+}
+.credits-active .demo-cont__credits {
+  transition: transform 0.7s 0.2333333333s;
+  transform: translate3d(0, 0, 0);
+}
+.demo-cont__credits *, .demo-cont__credits *:before, .demo-cont__credits *:after {
+  box-sizing: border-box;
+}
+.demo-cont__credits-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
+.demo-cont__credits-close:before, .demo-cont__credits-close:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  margin-top: -1px;
+  background: #fff;
+}
+.demo-cont__credits-close:before {
+  transform: rotate(45deg);
+}
+.demo-cont__credits-close:after {
+  transform: rotate(-45deg);
+}
+.demo-cont__credits-heading {
+  text-transform: uppercase;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.demo-cont__credits-img {
+  display: block;
+  width: 60%;
+  margin: 0 auto 30px;
+  border-radius: 10px;
+}
+.demo-cont__credits-name {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.demo-cont__credits-link {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #fff;
+}
+.demo-cont__credits-blend {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.example-slider {
+  z-index: 2;
+  transform: translate3d(0, 0, 0);
+  transition: transform 0.7s;
+}
+.credits-active .example-slider {
+  transform: translate3d(-400px, 0, 0) rotateY(10deg) scale(0.9);
+}
+.example-slider .fnc-slide-1 .fnc-slide__inner,
+.example-slider .fnc-slide-1 .fnc-slide__mask-inner {
+  background-image: url(/static/img/co1.png);
+}
+.example-slider .fnc-slide-2 .fnc-slide__inner,
+.example-slider .fnc-slide-2 .fnc-slide__mask-inner {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/captainamerica.jpg");
+}
+.example-slider .fnc-slide-3 .fnc-slide__inner,
+.example-slider .fnc-slide-3 .fnc-slide__mask-inner {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/ironman-alt.jpg");
+}
+.example-slider .fnc-slide-3 .fnc-slide__inner:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+}
+.example-slider .fnc-slide-4 .fnc-slide__inner,
+.example-slider .fnc-slide-4 .fnc-slide__mask-inner {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/thor.jpg");
+}
+.example-slider .fnc-slide-4 .fnc-slide__inner:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+.example-slider .fnc-slide__heading,
+.example-slider .fnc-slide__action-btn,
+.example-slider .fnc-nav__control {
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+/* COLORFUL SWITCH STYLES 
+   ORIGINAL DEMO - https://codepen.io/suez/pen/WQjwOb */
+.colorful-switch {
+  position: relative;
+  width: 180px;
+  height: 77.1428571429px;
+  margin: 0 auto;
+  border-radius: 32.1428571429px;
+  background: #cfcfcf;
+}
+.colorful-switch:before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  width: 190px;
+  height: 87.1428571429px;
+  border-radius: 37.1428571429px;
+  background: #314239;
+  transition: background-color 0.3s;
+}
+.colorful-switch:hover:before {
+  background: #4C735F;
+}
+.colorful-switch__checkbox {
+  z-index: -10;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.colorful-switch__label {
+  z-index: 1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 32.1428571429px;
+  cursor: pointer;
+}
+.colorful-switch__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 540px;
+  height: 100%;
+  background: linear-gradient(90deg, #14DCD6 0, #10E7BD 180px, #EF9C29 360px, #E76339 100%);
+  transition: transform 0.5s;
+  transform: translate3d(-360px, 0, 0);
+}
+.colorful-switch__checkbox:checked ~ .colorful-switch__label .colorful-switch__bg {
+  transform: translate3d(0, 0, 0);
+}
+.colorful-switch__dot {
+  position: absolute;
+  left: 131.1428571429px;
+  top: 50%;
+  width: 5.1428571429px;
+  height: 5.1428571429px;
+  margin-left: -2.5714285714px;
+  margin-top: -2.5714285714px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.5s;
+  transform: translate3d(0, 0, 0);
+}
+.colorful-switch__checkbox:checked ~ .colorful-switch__label .colorful-switch__dot {
+  transform: translate3d(-80.3571428571px, 0, 0);
+}
+.colorful-switch__on {
+  position: absolute;
+  left: 104.1428571429px;
+  top: 22.5px;
+  width: 19.2857142857px;
+  height: 36px;
+  transition: transform 0.5s;
+  transform: translate3d(0, 0, 0);
+}
+.colorful-switch__checkbox:checked ~ .colorful-switch__label .colorful-switch__on {
+  transform: translate3d(-80.3571428571px, 0, 0);
+}
+.colorful-switch__on__inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.25s 0s cubic-bezier(0.52, -0.96, 0.51, 1.28);
+  transform-origin: 100% 50%;
+  transform: rotate(45deg) scale(0) translateZ(0);
+}
+.colorful-switch__checkbox:checked ~ .colorful-switch__label .colorful-switch__on__inner {
+  transition: transform 0.25s 0.25s cubic-bezier(0.67, -0.16, 0.47, 1.61);
+  transform: rotate(45deg) scale(1) translateZ(0);
+}
+.colorful-switch__on__inner:before, .colorful-switch__on__inner:after {
+  content: "";
+  position: absolute;
+  border-radius: 2.5714285714px;
+  background: #fff;
+}
+.colorful-switch__on__inner:before {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 6.1428571429px;
+}
+.colorful-switch__on__inner:after {
+  right: 0;
+  top: 0;
+  width: 6.1428571429px;
+  height: 100%;
+}
+.colorful-switch__off {
+  position: absolute;
+  left: 131.1428571429px;
+  top: 50%;
+  width: 41.1428571429px;
+  height: 41.1428571429px;
+  margin-left: -20.5714285714px;
+  margin-top: -20.5714285714px;
+  transition: transform 0.5s;
+  transform: translate3d(0, 0, 0);
+}
+.colorful-switch__checkbox:checked ~ .colorful-switch__label .colorful-switch__off {
+  transform: translate3d(-80.3571428571px, 0, 0);
+}
+.colorful-switch__off:before, .colorful-switch__off:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 5.1428571429px;
+  margin-top: -2.5714285714px;
+  border-radius: 2.5714285714px;
+  background: #fff;
+  transition: transform 0.25s 0.25s;
+}
+.colorful-switch__checkbox:checked ~ .colorful-switch__label .colorful-switch__off:before, .colorful-switch__checkbox:checked ~ .colorful-switch__label .colorful-switch__off:after {
+  transition-delay: 0s;
+}
+.colorful-switch__off:before {
+  transform: rotate(45deg) scaleX(1) translateZ(0);
+}
+.colorful-switch__checkbox:checked ~ .colorful-switch__label .colorful-switch__off:before {
+  transform: rotate(45deg) scaleX(0) translateZ(0);
+}
+.colorful-switch__off:after {
+  transition-timing-function: cubic-bezier(0.67, -0.16, 0.47, 1.61);
+  transform: rotate(-45deg) scaleX(1) translateZ(0);
+}
+.colorful-switch__checkbox:checked ~ .colorful-switch__label .colorful-switch__off:after {
+  transition-timing-function: ease;
+  transform: rotate(-45deg) scaleX(0) translateZ(0);
+}
+</style>
     <hr>
+    <h2 style="text-align: center;">Servicios Área Contable</h2>
+<div class="demo-cont">
+    <!-- slider start -->
+    <div class="fnc-slider example-slider">
+      <div class="fnc-slider__slides">
+        <!-- slide start -->
+        <div class="fnc-slide m--blend-green m--active-slide">
+          <div class="fnc-slide__inner">
+            <div class="fnc-slide__mask">
+              <div class="fnc-slide__mask-inner"></div>
+            </div>
+            <div class="fnc-slide__content">
+              <h2 class="fnc-slide__heading">
+                <div class="fnc-slide__heading-line">
+                  <span>Constitución de empresas En un día.</span>
+                </div>
+                <div class="fnc-slide__heading-line">
+                  <span>Modelos de Sociedades en Chile (Ltda. EIRL, SPA SA).</span>
+                </div>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <!-- slide end -->
+        <!-- slide start -->
+        <div class="fnc-slide m--blend-dark">
+          <div class="fnc-slide__inner">
+            <div class="fnc-slide__mask">
+              <div class="fnc-slide__mask-inner"></div>
+            </div>
+            <div class="fnc-slide__content">
+              <h2 class="fnc-slide__heading">
+                <div class="fnc-slide__heading-line">
+                  <span>Iniciación de Actividades</span>
+                </div>
+                <div class="fnc-slide__heading-line">
+                  <span></span>
+                </div>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <!-- slide end -->
+        <!-- slide start -->
+        <div class="fnc-slide m--blend-red">
+          <div class="fnc-slide__inner">
+            <div class="fnc-slide__mask">
+              <div class="fnc-slide__mask-inner"></div>
+            </div>
+            <div class="fnc-slide__content">
+              <h2 class="fnc-slide__heading">
+                <div class="fnc-slide__heading-line">
+                  <span>Iron</span>
+                </div>
+                <div class="fnc-slide__heading-line">
+                  <span>Man</span>
+                </div>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <!-- slide end -->
+        <!-- slide start -->
+        <div class="fnc-slide m--blend-blue">
+          <div class="fnc-slide__inner">
+            <div class="fnc-slide__mask">
+              <div class="fnc-slide__mask-inner"></div>
+            </div>
+            <div class="fnc-slide__content">
+              <h2 class="fnc-slide__heading">
+                <div class="fnc-slide__heading-line">
+                  <span>Thor</span>
+                </div>
+                <div class="fnc-slide__heading-line">
+                  <span>Just Thor</span>
+                </div>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <!-- slide end -->
+      </div>
+      <nav class="fnc-nav">
+        <div class="fnc-nav__bgs">
+          <div class="fnc-nav__bg m--navbg-green m--active-nav-bg"></div>
+          <div class="fnc-nav__bg m--navbg-dark"></div>
+          <div class="fnc-nav__bg m--navbg-red"></div>
+          <div class="fnc-nav__bg m--navbg-blue"></div>
+        </div>
+        <div class="fnc-nav__controls">
+          <button class="fnc-nav__control">
+            <i class="fas fa-arrow-right"></i>
+            <span class="fnc-nav__control-progress"></span>
+          </button>
+          <button class="fnc-nav__control">
+            <i class="fas fa-arrow-right"></i>
+            <span class="fnc-nav__control-progress"></span>
+          </button>
+          <button class="fnc-nav__control">
+            <i class="fas fa-arrow-right"></i>
+            <span class="fnc-nav__control-progress"></span>
+          </button>
+          <button class="fnc-nav__control">
+            <i class="fas fa-arrow-right"></i>
+            <span class="fnc-nav__control-progress"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <br><br><br>
+  <hr>
+<div class="demo-cont">
+    <!-- slider start -->
+    <div class="fnc-slider example-slider">
+      <div class="fnc-slider__slides">
+        <!-- slide start -->
+        <div class="fnc-slide m--blend-green m--active-slide">
+          <div class="fnc-slide__inner">
+            <div class="fnc-slide__mask">
+              <div class="fnc-slide__mask-inner"></div>
+            </div>
+            <div class="fnc-slide__content">
+              <h2 class="fnc-slide__heading">
+                <div class="fnc-slide__heading-line">
+                  <span>Black</span>
+                </div>
+                <div class="fnc-slide__heading-line">
+                  <span>Widow</span>
+                </div>
+              </h2>
+              <button type="button" class="fnc-slide__action-btn">
+                Credits
+                <span data-text="Credits">Credits</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- slide end -->
+        <!-- slide start -->
+        <div class="fnc-slide m--blend-dark">
+          <div class="fnc-slide__inner">
+            <div class="fnc-slide__mask">
+              <div class="fnc-slide__mask-inner"></div>
+            </div>
+            <div class="fnc-slide__content">
+              <h2 class="fnc-slide__heading">
+                <div class="fnc-slide__heading-line">
+                  <span>Captain</span>
+                </div>
+                <div class="fnc-slide__heading-line">
+                  <span>America</span>
+                </div>
+              </h2>
+              <button type="button" class="fnc-slide__action-btn">
+                Credits
+                <span data-text="Credits">Credits</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- slide end -->
+        <!-- slide start -->
+        <div class="fnc-slide m--blend-red">
+          <div class="fnc-slide__inner">
+            <div class="fnc-slide__mask">
+              <div class="fnc-slide__mask-inner"></div>
+            </div>
+            <div class="fnc-slide__content">
+              <h2 class="fnc-slide__heading">
+                <div class="fnc-slide__heading-line">
+                  <span>Iron</span>
+                </div>
+                <div class="fnc-slide__heading-line">
+                  <span>Man</span>
+                </div>
+              </h2>
+              <button type="button" class="fnc-slide__action-btn">
+                Credits
+                <span data-text="Credits">Credits</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- slide end -->
+        <!-- slide start -->
+        <div class="fnc-slide m--blend-blue">
+          <div class="fnc-slide__inner">
+            <div class="fnc-slide__mask">
+              <div class="fnc-slide__mask-inner"></div>
+            </div>
+            <div class="fnc-slide__content">
+              <h2 class="fnc-slide__heading">
+                <div class="fnc-slide__heading-line">
+                  <span>Thor</span>
+                </div>
+                <div class="fnc-slide__heading-line">
+                  <span>Just Thor</span>
+                </div>
+              </h2>
+              <button type="button" class="fnc-slide__action-btn">
+                Credits
+                <span data-text="Credits">Credits</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- slide end -->
+      </div>
+      <nav class="fnc-nav">
+        <div class="fnc-nav__bgs">
+          <div class="fnc-nav__bg m--navbg-green m--active-nav-bg"></div>
+          <div class="fnc-nav__bg m--navbg-dark"></div>
+          <div class="fnc-nav__bg m--navbg-red"></div>
+          <div class="fnc-nav__bg m--navbg-blue"></div>
+        </div>
+        <div class="fnc-nav__controls">
+          <button class="fnc-nav__control">
+            Black Widow
+            <span class="fnc-nav__control-progress"></span>
+          </button>
+          <button class="fnc-nav__control">
+            Captain America
+            <span class="fnc-nav__control-progress"></span>
+          </button>
+          <button class="fnc-nav__control">
+            Iron Man
+            <span class="fnc-nav__control-progress"></span>
+          </button>
+          <button class="fnc-nav__control">
+            Thor
+            <span class="fnc-nav__control-progress"></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+    
+  </div>
+
     <!--/ Section Services Star /-->
     <h2 style="text-align: center;">Servicios Área Contable</h2>
     <br>
+
     <div class="container">
         <div class="card-carousel">
             <div class="card" id="1">
@@ -822,35 +1670,37 @@
 
 
     <!--/ Section Testimonials Star /-->
-    <h2 style="text-align: center;">Reseñas</h2>
-    <div class="testimonials paralax-mf bg-image" style="background-image: url(/static/img/overlay-bg.jpg)">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="testimonial-mf" class="owl-carousel owl-theme">
-                        <div class="testimonial-box">
-                            <div class="author-test">
-                                <img src="{% static 'img/empresa1.png' %}" style="height:200px" alt="" class="rounded-circle b-shadow-a">
-                                <span class="author">Outlet Sports</span>
+    <div id="work" class="intro route bg-image">
+        <div class="testimonials paralax-mf bg-image" style="background-image: url(/static/img/reseñas.png)">
+            <div class="container">
+                <h2 style="text-align: center;">Reseñas</h2>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="testimonial-mf" class="owl-carousel owl-theme">
+                            <div class="testimonial-box">
+                                <div class="author-test">
+                                    <img src="{% static 'img/empresa1.png' %}" style="height:200px" alt="" class="rounded-circle b-shadow-a">
+                                    <span class="author">Outlet Sports</span>
+                                </div>
+                                <div class="content-test">
+                                    <p class="description lead">
+                                        Soy un empresario y emprendedor que sabe lo importante que es contar con una empresa seria en servicios contables. Conozco a Viviana Bahamondes desde hace más de 10 años como Contadora de empresas y doy fe de su profesionalismo y dedicación para con sus
+                                        clientes y pretendo seguir contando con sus servicios muchos años mas. Estoy agradecido de que su equipo y servicios contables puedan gestionar mi empresa.
+                                    </p>
+                                    <span class="comit"><i class="fa fa-quote-right"></i></span>
+                                </div>
                             </div>
-                            <div class="content-test">
-                                <p class="description lead">
-                                    Soy un empresario y emprendedor que sabe lo importante que es contar con una empresa seria en servicios contables. Conozco a Viviana Bahamondes desde hace más de 10 años como Contadora de empresas y doy fe de su profesionalismo y dedicación para con sus
-                                    clientes y pretendo seguir contando con sus servicios muchos años mas. Estoy agradecido de que su equipo y servicios contables puedan gestionar mi empresa.
-                                </p>
-                                <span class="comit"><i class="fa fa-quote-right"></i></span>
-                            </div>
-                        </div>
-                        <div class="testimonial-box">
-                            <div class="author-test">
-                                <img src="{% static 'img/delicias_caseras1.png' %}" alt="" class="rounded-circle b-shadow-a">
-                                <span class="author">Delicias Caseras</span>
-                            </div>
-                            <div class="content-test">
-                                <p class="description lead">
-                                    Estoy muy agradecida y complacida con los servicios de contabilidad que nos presta Asesoríascontables Bahamondes a Delicias Caseras Spa, excelente atención y disponibilidad de servicio al cliente.
-                                </p>
-                                <span class="comit"><i class="fa fa-quote-right"></i></span>
+                            <div class="testimonial-box">
+                                <div class="author-test">
+                                    <img src="{% static 'img/delicias_caseras1.png' %}" alt="" class="rounded-circle b-shadow-a">
+                                    <span class="author">Delicias Caseras</span>
+                                </div>
+                                <div class="content-test">
+                                    <p class="description lead">
+                                        Estoy muy agradecida y complacida con los servicios de contabilidad que nos presta Asesoríascontables Bahamondes a Delicias Caseras Spa, excelente atención y disponibilidad de servicio al cliente.
+                                    </p>
+                                    <span class="comit"><i class="fa fa-quote-right"></i></span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -858,10 +1708,11 @@
             </div>
         </div>
     </div>
+    <br><br><br><br><br><br><br><br><br>
 
     <style>
         .overlay {
-            background-image: linear-gradient( to right, rgba(90, 100, 232, 0.9), rgba(84, 96, 234, 0.9));
+            background-image: linear-gradient( to right, rgba(84, 96, 234, 0.9), rgba(109, 236, 226, 0.9));
             width: 100%;
             height: 100%;
             z-index: 1;
@@ -945,11 +1796,11 @@
         }
         
         .contact-form input::placeholder {
-            color: #222;
+            color: rgb;
         }
         
         .contact-form textarea::placeholder {
-            color: #222;
+            color: rgb(90, 90, 90);
         }
         
         .contact-form input {
@@ -965,7 +1816,7 @@
             box-shadow: none;
             background: transparent;
             border: 2px solid transparent;
-            border-bottom-color: rgb(254, 132, 111);
+            border-bottom-color: #e3f032;
         }
         
         .contact-form textarea:hover,
@@ -974,7 +1825,7 @@
             outline: none;
             box-shadow: none;
             border: 2px solid transparent;
-            border-bottom-color: rgb(254, 132, 111);
+            border-bottom-color: #e3f032;
         }
         
         .taso-btn {
@@ -1063,14 +1914,14 @@
         }
         
         .btn-big {
-            color: #ffffff;
+            color: rgb;
             -webkit-box-shadow: 0px 5px 20px 0px rgba(45, 45, 45, 0.47843137254901963);
             box-shadow: 2px 5px 10px 0px rgba(45, 45, 45, 0.19);
-            color: #fff !important;
+            color: rgb !important;
             margin-right: 20px;
-            background: #fe846f;
+            background: #e3f032;
             transition: 0.2s;
-            border: 2px solid #fe846f;
+            border: 2px solid #fcfe6f;
             margin-top: 50px;
         }
         
@@ -1089,7 +1940,7 @@
     <!-- Responsive Contact Page with Dark Mode and Form Validation (vanilla JS).
 
 *Designed & built for desktop and tablets with viewport width >= 720px and in landscape orientation.  -->
-
+<div id="contacto" class="intro route bg-image">
     <section class="section-bg" style="background-image: url(https://i.ibb.co/9p3Cnk9/slider-2.jpg);" data-scroll-index="7">
         <div class="overlay pt-100 pb-100 ">
             <div class="container">
@@ -1100,17 +1951,18 @@
                             <h2 class="contact-title">Tienes alguna pregunta?</h2>
                             <p>Si necesitas contactarnos para realizar alguna consulta, completa el formulario y a la brevedad te responderemos.</p>
                             <ul class="contact-info">
+
                                 <li>
                                     <div class="info-left">
-                                        <i class="fas fa-mobile-alt"></i>
+                                        <a href="https://www.instagram.com/asesorias_contablesspa/?hl=es-la"><i class="fab fa-instagram"></i></a>
                                     </div>
                                     <div class="info-right">
-                                        <h4>+(+56) 9 5409 2367 - (2) 27164445</h4>
+                                        <h4>asesorias_contablesspa</h4>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="info-left">
-                                        <i class="fas fa-at"></i>
+                                        <a href="https://www.google.com/intl/es-419/gmail/about/"><i class="fas fa-at"></i></a>
                                     </div>
                                     <div class="info-right">
                                         <h4>Asesoriascontablesbahamondes@gmail.com</h4>
@@ -1118,7 +1970,7 @@
                                 </li>
                                 <li>
                                     <div class="info-left">
-                                        <i class="fas fa-map-marker-alt"></i>
+                                        <a href="https://www.google.cl/maps/place/Barrio+Portezuelo/@-33.2156491,-70.6835413,17z/data=!3m1!4b1!4m5!3m4!1s0x9662bbc7c5b0da71:0xd13baa5bd9266c09!8m2!3d-33.2156536!4d-70.6813526"><i class="fas fa-map-marker-alt"></i></a>
                                     </div>
                                     <div class="info-right">
                                         <h4>Barrio Portesuelo, Colina</h4>
@@ -1135,34 +1987,34 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Ingresa tu Nombre *" required="required">
+                                            <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Ingrese su Nombre" required="required">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <input type="text" name="number" class="form-control" id="number" placeholder="Ingresa tu Numero *" required="required">
+                                            <input type="text" name="number" class="form-control" id="number" placeholder="Ingrese su Número" required="required">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <input type="text" name="subject" class="form-control" id="subject" placeholder="Ingresa tu Asunto *" required="required">
+                                            <input type="text" name="subject" class="form-control" id="subject" placeholder="Ingrese Asunto" required="required">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <input type="email" name="email" class="form-control" id="email" placeholder="Ingresa tu Correo *" required="required">
+                                            <input type="email" name="email" class="form-control" id="email" placeholder="Ingrese Correo" required="required">
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <textarea rows="4" name="message" class="form-control" id="description" placeholder="Ingresa tu Mensaje *" required="required"></textarea>
+                                            <textarea rows="4" name="message" class="form-control" id="description" placeholder="Ingrese Mensaje" required="required"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <!--contact button-->
                                         <button class="btn-big btn btn-bg">
-                                      Send Us <i class="fas fa-arrow-right"></i>
+                                      Enviar <i class="fas fa-arrow-right"></i>
                                     </button>
                                     </div>
                                 </div>
@@ -1176,6 +2028,7 @@
     </div>
     </div>
     </div>
+</div>
 
     <!-- Image credit: Oliver Sjöström https://www.pexels.com/photo/body-of-water-near-green-mountain-931018/  -->
     <!--/ Section Contact-footer End /-->
@@ -1187,7 +2040,7 @@
 
             <div class="whatsapp-items">
 
-                <a target="_blank" class="whatsapp-row-item" href="https://wa.me/56987307491?text=Buenas dias/tardes, me interesa conocer el area de Servicio Contable, espero atentamente , saludos!">
+                <a target="_blank" class="whatsapp-row-item" href="https://wa.me/56954092367?text=Buenos dias/tardes, me interesa conocer el Área de Servicio Contable, espero atentamente, saludos!">
                     <div class="whatsapp-list-item-avatar">
                         <i class="material-icons">calculate</i>
                     </div>
@@ -1197,7 +2050,7 @@
                     </div>
                 </a>
 
-                <a target="_blank" class="whatsapp-row-item" href="https://wa.me/56987307491?text=Buenas dias/tardes, me interesa conocer el area de Servicio Gestion de  Personas, espero atentamente , saludos!">
+                <a target="_blank" class="whatsapp-row-item" href="https://wa.me/56954092367?text=Buenos días/tardes, me interesa conocer el Área de Servicio Gestión de Personas, espero atentamente, saludos!">
                     <div class="whatsapp-list-item-avatar">
                         <i class="material-icons">manage_accounts</i>
                     </div>
@@ -1664,7 +2517,211 @@
     <!-- Template Main Javascript File -->
     <script src="{% static 'js/main.js' %}" type="text/javascript"></script>
 
+    <script>
+        (function () {
+  var $$ = function (selector, context) {
+    var context = context || document;
+    var elements = context.querySelectorAll(selector);
+    return [].slice.call(elements);
+  };
 
+  function _fncSliderInit($slider, options) {
+    var prefix = ".fnc-";
+
+    var $slider = $slider;
+    var $slidesCont = $slider.querySelector(prefix + "slider__slides");
+    var $slides = $$(prefix + "slide", $slider);
+    var $controls = $$(prefix + "nav__control", $slider);
+    var $controlsBgs = $$(prefix + "nav__bg", $slider);
+    var $progressAS = $$(prefix + "nav__control-progress", $slider);
+
+    var numOfSlides = $slides.length;
+    var curSlide = 1;
+    var sliding = false;
+    var slidingAT =
+      +parseFloat(getComputedStyle($slidesCont)["transition-duration"]) * 1000;
+    var slidingDelay =
+      +parseFloat(getComputedStyle($slidesCont)["transition-delay"]) * 1000;
+
+    var autoSlidingActive = false;
+    var autoSlidingTO;
+    var autoSlidingDelay = 5000; // default autosliding delay value
+    var autoSlidingBlocked = false;
+
+    var $activeSlide;
+    var $activeControlsBg;
+    var $prevControl;
+
+    function setIDs() {
+      $slides.forEach(function ($slide, index) {
+        $slide.classList.add("fnc-slide-" + (index + 1));
+      });
+
+      $controls.forEach(function ($control, index) {
+        $control.setAttribute("data-slide", index + 1);
+        $control.classList.add("fnc-nav__control-" + (index + 1));
+      });
+
+      $controlsBgs.forEach(function ($bg, index) {
+        $bg.classList.add("fnc-nav__bg-" + (index + 1));
+      });
+    }
+
+    setIDs();
+
+    function afterSlidingHandler() {
+      $slider
+        .querySelector(".m--previous-slide")
+        .classList.remove("m--active-slide", "m--previous-slide");
+      $slider
+        .querySelector(".m--previous-nav-bg")
+        .classList.remove("m--active-nav-bg", "m--previous-nav-bg");
+
+      $activeSlide.classList.remove("m--before-sliding");
+      $activeControlsBg.classList.remove("m--nav-bg-before");
+      $prevControl.classList.remove("m--prev-control");
+      $prevControl.classList.add("m--reset-progress");
+      var triggerLayout = $prevControl.offsetTop;
+      $prevControl.classList.remove("m--reset-progress");
+
+      sliding = false;
+      var layoutTrigger = $slider.offsetTop;
+
+      if (autoSlidingActive && !autoSlidingBlocked) {
+        setAutoslidingTO();
+      }
+    }
+
+    function performSliding(slideID) {
+      if (sliding) return;
+      sliding = true;
+      window.clearTimeout(autoSlidingTO);
+      curSlide = slideID;
+
+      $prevControl = $slider.querySelector(".m--active-control");
+      $prevControl.classList.remove("m--active-control");
+      $prevControl.classList.add("m--prev-control");
+      $slider
+        .querySelector(prefix + "nav__control-" + slideID)
+        .classList.add("m--active-control");
+
+      $activeSlide = $slider.querySelector(prefix + "slide-" + slideID);
+      $activeControlsBg = $slider.querySelector(prefix + "nav__bg-" + slideID);
+
+      $slider
+        .querySelector(".m--active-slide")
+        .classList.add("m--previous-slide");
+      $slider
+        .querySelector(".m--active-nav-bg")
+        .classList.add("m--previous-nav-bg");
+
+      $activeSlide.classList.add("m--before-sliding");
+      $activeControlsBg.classList.add("m--nav-bg-before");
+
+      var layoutTrigger = $activeSlide.offsetTop;
+
+      $activeSlide.classList.add("m--active-slide");
+      $activeControlsBg.classList.add("m--active-nav-bg");
+
+      setTimeout(afterSlidingHandler, slidingAT + slidingDelay);
+    }
+
+    function controlClickHandler() {
+      if (sliding) return;
+      if (this.classList.contains("m--active-control")) return;
+      if (options.blockASafterClick) {
+        autoSlidingBlocked = true;
+        $slider.classList.add("m--autosliding-blocked");
+      }
+
+      var slideID = +this.getAttribute("data-slide");
+
+      performSliding(slideID);
+    }
+
+    $controls.forEach(function ($control) {
+      $control.addEventListener("click", controlClickHandler);
+    });
+
+    function setAutoslidingTO() {
+      window.clearTimeout(autoSlidingTO);
+      var delay = +options.autoSlidingDelay || autoSlidingDelay;
+      curSlide++;
+      if (curSlide > numOfSlides) curSlide = 1;
+
+      autoSlidingTO = setTimeout(function () {
+        performSliding(curSlide);
+      }, delay);
+    }
+
+    if (options.autoSliding || +options.autoSlidingDelay > 0) {
+      if (options.autoSliding === false) return;
+
+      autoSlidingActive = true;
+      setAutoslidingTO();
+
+      $slider.classList.add("m--with-autosliding");
+      var triggerLayout = $slider.offsetTop;
+
+      var delay = +options.autoSlidingDelay || autoSlidingDelay;
+      delay += slidingDelay + slidingAT;
+
+      $progressAS.forEach(function ($progress) {
+        $progress.style.transition = "transform " + delay / 1000 + "s";
+      });
+    }
+
+    $slider
+      .querySelector(".fnc-nav__control:first-child")
+      .classList.add("m--active-control");
+  }
+
+  var fncSlider = function (sliderSelector, options) {
+    var $sliders = $$(sliderSelector);
+
+    $sliders.forEach(function ($slider) {
+      _fncSliderInit($slider, options);
+    });
+  };
+
+  window.fncSlider = fncSlider;
+})();
+
+/* not part of the slider scripts */
+
+/* Slider initialization
+options:
+autoSliding - boolean
+autoSlidingDelay - delay in ms. If audoSliding is on and no value provided, default value is 5000
+blockASafterClick - boolean. If user clicked any sliding control, autosliding won't start again
+*/
+fncSlider(".example-slider", { autoSlidingDelay: 4000 });
+
+var $demoCont = document.querySelector(".demo-cont");
+
+[].slice
+  .call(document.querySelectorAll(".fnc-slide__action-btn"))
+  .forEach(function ($btn) {
+    $btn.addEventListener("click", function () {
+      $demoCont.classList.toggle("credits-active");
+    });
+  });
+
+document
+  .querySelector(".demo-cont__credits-close")
+  .addEventListener("click", function () {
+    $demoCont.classList.remove("credits-active");
+  });
+
+document
+  .querySelector(".js-activate-global-blending")
+  .addEventListener("click", function () {
+    document
+      .querySelector(".example-slider")
+      .classList.toggle("m--global-blending-active");
+  });
+
+    </script>
 </body>
 
 </html>
