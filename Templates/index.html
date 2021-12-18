@@ -1097,16 +1097,15 @@
                     <div class="col-lg-6 d-flex align-items-center">
                         <div class="contact-info">
 
-                            <h2 class="contact-title">Have Any Questions?</h2>
-                            <p>Lorem ipsum is a dummy text used to replace text in some areas just for the purpose of an example. It can be used in publishing and graphic design. The lorem ipsum text is usually a section of a Latin text by Cicero with words
-                                altered, added and removed to make it nonsensical.</p>
+                            <h2 class="contact-title">Tienes alguna pregunta?</h2>
+                            <p>Si necesitas contactarnos para realizar alguna consulta, completa el formulario y a la brevedad te responderemos.</p>
                             <ul class="contact-info">
                                 <li>
                                     <div class="info-left">
                                         <i class="fas fa-mobile-alt"></i>
                                     </div>
                                     <div class="info-right">
-                                        <h4>+11223344550</h4>
+                                        <h4>+(+56) 9 5409 2367 - (2) 27164445</h4>
                                     </div>
                                 </li>
                                 <li>
@@ -1114,7 +1113,7 @@
                                         <i class="fas fa-at"></i>
                                     </div>
                                     <div class="info-right">
-                                        <h4>info@example.com</h4>
+                                        <h4>Asesoriascontablesbahamondes@gmail.com</h4>
                                     </div>
                                 </li>
                                 <li>
@@ -1122,7 +1121,7 @@
                                         <i class="fas fa-map-marker-alt"></i>
                                     </div>
                                     <div class="info-right">
-                                        <h4>1243 Stree New Chandigarh, INDIA</h4>
+                                        <h4>Barrio Portesuelo, Colina</h4>
                                     </div>
                                 </li>
                             </ul>
@@ -1131,22 +1130,33 @@
                     <div class="col-lg-6 d-flex align-items-center">
                         <div class="contact-form">
                             <!--Contact Form-->
-                            <form id='contact-form' method='POST'><input type='hidden' name='form-name' value='contactForm' />
+                            <form id='contact-form' method='POST'> {% csrf_token %}
+                                <input type='hidden' name='form-name' value='contactForm' />
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <input type="text" name="name" class="form-control" id="first-name" placeholder="Enter Your Name *" required="required">
+                                            <input type="text" name="fullname" class="form-control" id="fullname" placeholder="Ingresa tu Nombre *" required="required">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <input type="email" name="email" class="form-control" id="email" placeholder="Enter Your Email *" required="required">
+                                            <input type="text" name="number" class="form-control" id="number" placeholder="Ingresa tu Numero *" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="text" name="subject" class="form-control" id="subject" placeholder="Ingresa tu Asunto *" required="required">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="email" name="email" class="form-control" id="email" placeholder="Ingresa tu Correo *" required="required">
                                         </div>
                                     </div>
 
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <textarea rows="4" name="message" class="form-control" id="description" placeholder="Enter Your Message *" required="required"></textarea>
+                                            <textarea rows="4" name="message" class="form-control" id="description" placeholder="Ingresa tu Mensaje *" required="required"></textarea>
                                         </div>
                                     </div>
                                     <div class="col-md-12">

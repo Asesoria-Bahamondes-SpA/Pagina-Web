@@ -1,2 +1,3 @@
-Django==3.1.7
-django-rest-framework
+Django==4.0
+djangorestframework==3.13.1
+sendgrid-django==4.2.0

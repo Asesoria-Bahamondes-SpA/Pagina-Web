@@ -121,7 +121,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'Templates/static'),)
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-EMAIL_BACKEND = "sendgrid_backend.SendgridBackend"
-SENDGRID_API_KEY = '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'
-SENDGRID_SANDBOX_MODE_IN_DEBUG=False
+
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
